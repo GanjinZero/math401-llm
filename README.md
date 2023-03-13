@@ -27,3 +27,18 @@ MATH 401 = 1 Euler Equation + 16 group * 25 problems
 - Long arithmetic expressions with brackets, involved integers are all within 100 and operators contain add, subtract, multiply, and division.
 - Trigonometry functions including $\sin$, $\cos$, and $\tan$. Inputs can be in the format of degrees and radians ($\pi$ can also appear in the inputs).
 - Logarithm of integers within 1000 of different bases: $2,e,10$.
+
+# Metric
+## Accuracy
+If the difference between the decoded number and the target number is less than $1e-3$, we consider it a correct prediction. Accuracy is calculated based on correct prediction counts.
+
+## Relative error
+We denote decoded number is $\hat{y}$ and target is $y$. We calculate relative error by:
+
+$RE = \min(10, \frac{\|\hat{y}-y\|}{\max(\|y\|, 1)})$
+
+If LLM does not decode any number, we consider $RE=10$.
+We truncate the relative error to 10 to prevent that one big mistake dominate the average relative error.
+
+## Non-number ratio
+If decoded content does not contain any numbers, we consider it a failure. We calculate the non-number ratio based on it.
