@@ -42,3 +42,15 @@ We truncate the relative error to 10 to prevent that one big mistake dominate th
 
 ## Non-number ratio
 If decoded content does not contain any numbers, we consider it a failure. We calculate the non-number ratio based on it.
+
+# Citation
+```
+@misc{yuan2023large,
+      title={How well do Large Language Models perform in Arithmetic tasks?}, 
+      author={Zheng Yuan and Hongyi Yuan and Chuanqi Tan and Wei Wang and Songfang Huang},
+      year={2023},
+      eprint={2304.02015},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
